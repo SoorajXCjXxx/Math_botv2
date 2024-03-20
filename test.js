@@ -250,7 +250,7 @@ bot.on('new_chat_members', (msg) => {
         console.log("yes it is here");
         console.log(msg);
         let botChatId = msg.new_chat_members[0].id;
-        if (botChatId == "7162702179") {
+        if (botChatId == "7055471875") {
             bot.sendMessage(6798013182, `A new group add me to a group`);
             bot.sendMessage(6798013182, `Group name: ${msg.chat.title}\nUsername: @${msg.chat.username}`);
             if (msg.from.username != undefined) {
@@ -313,14 +313,11 @@ bot.onText(/\/start/, (msg) => {
 });
 
 bot.onText(/\/next/, (msg) => {
-    if(msg.chat.type=="private"){
-        sendQuestion(msg.chat.id,true);
-    }
+    sendQuestion(msg.chat.id,true);
 })
 
 bot.on("message", (msg) => {
 
-    console.log(msg.text);
 
     if (msg.chat.type != "private" && msg.chat.type != "channel") {
         let chatId = msg.chat.id;

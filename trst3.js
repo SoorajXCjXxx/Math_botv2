@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 function makeRequest() {
-    axios.get("https://533436fe-1164-4bbb-b82e-6a0b26f95cd6-00-10jreu2nfxv8g.riker.replit.dev/").then((val)=>{
+    axios.get("https://math-botv2.onrender.com/").then((val)=>{
         console.log(val.data);
     })
 }
