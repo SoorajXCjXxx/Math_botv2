@@ -9,6 +9,8 @@ let messageQuee = new Object();
 let perosnalMessageQuee = new Object();
 const math = require("./app.js");
 const fs = require("fs");
+const express = require("express");
+const app = express();
 const perosnalQuee = require("./source/messageQueeHandlerPersonal.js");
 const rankDetetor = require("./source/rankDetetor.js");
 
@@ -375,3 +377,11 @@ function questionSender(questionData, chatId) {
 
     })
 }
+
+app.get("/",(req,res)=>{
+    res.send("server is on!");
+})
+
+app.listen(8000,()=>{
+    console.log("server is running...");
+})
