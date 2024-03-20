@@ -1,0 +1,11 @@
+[
+    {
+        "abcd":{"eq":"axb+c=d","formula":"d-(a*b)","a":20,"b":10,"d":1000,"type":true,"target":"c","length":4,"format":"abcd"},
+        "abcd2":{"eq":"a÷b+c=d","formula":"d-(a/b)","a":20,"b":10,"d":1000,"type":true,"target":"c","length":4},
+        "abcde":{"eq":"a-exb+c=d","formula":"d-a+e*b","a":20,"b":10,"d":1000,"e":"30","type":true,"target":"c","length":5},
+
+        "abcd4":{"eq":"a+b+c=d","formula":"d-a-b","a":60,"b":40,"d":1000,"type":true,"target":"c","length":4},
+        "abcd5":{"eq":"a-b-c=d","formula":"-1*(d-a+b)","a":50,"b":50,"d":1000,"type":true,"target":"c","length":4}
+
+    }
+]
