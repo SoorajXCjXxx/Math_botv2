@@ -4,7 +4,7 @@ function registerFirst(bot,chatId,fs,targetId,messageId){
             [
                 {
                     text: 'Single click to rigister❤️',
-                    url: "tg://resolve?domain=math_bot_by_yebot"
+                    url: "tg://resolve?domain=Math_mm_bot"
                 },
 
             ]
