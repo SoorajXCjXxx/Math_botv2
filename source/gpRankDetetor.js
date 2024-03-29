@@ -3,7 +3,7 @@ function sortter() {
 
     // Read the JSON data from the file
     
-    const jsonData = fs.readFileSync("./data/usersPointPersonal.json", 'utf8');
+    const jsonData = fs.readFileSync("./data/groupPoint.json", 'utf8');
 
     // Parse the JSON data into a JavaScript object
     const data = JSON.parse(jsonData);
@@ -30,7 +30,7 @@ function sortter() {
 // // Print the top 10 users with their names and points
 function topTenPointers(bot,chatId,isPrivate){
     let userArray = sortter();
-    let text = "";
+    let text = "           Top 10 groups with most points           \n\n";
     // console.log('Top 10 Users:');
     userArray.slice(0, 10).forEach((user, index) => {
         let username;
@@ -53,10 +53,15 @@ function myRank(fs,bot,chatId){
     let userArray = sortter();
     for(let a =0;a<userArray.length;a++){
         if(chatId==userArray[a].userId){
-            bot.sendMessage(chatId,`🌎Global NO.${a+1}\n\n👤${userArray[a].name}\n\n🅿️ ${userArray[a].point} points`)
+            bot.sendMessage(chatId,`           Your group's current rank            \n\n🌎Global NO.${a+1}\n\n👤${userArray[a].name}\n\n🅿️ ${userArray[a].point} points`)
         }
     }
 
 }
 
-module.exports.rank = {topTenPointers,myRank};
+function send(fs,bot,chatId,isPrivate){
+    myRank(fs,bot,chatId);
+    topTenPointers(bot,chatId,isPrivate);
+}
+
+module.exports.gpRank = send;
